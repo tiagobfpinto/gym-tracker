@@ -1,0 +1,172 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Login Screen */
+  #login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #e9ecef;
+  }
+  #login-container form {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  #login-container input[type="text"],
+  #login-container input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  #login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #login-container input[type="submit"]:hover {
+    background: #4cae4c;
+  }
+  
+  /* Calendar Container */
+  #calendar-container {
+    display: none;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin-bottom: 10px;
+  }
+  #logout-btn {
+    padding: 8px 16px;
+    background: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #logout-btn:hover {
+    background: #c9302c;
+  }
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .day {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Blue background indicates a gym day */
+  .day.blue {
+    background: #add8e6;
+  }
+  .day span.date {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #666;
+  }
+  .day .training {
+    margin-top: 25px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .modal-content textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  .modal-content .modal-buttons {
+    text-align: right;
+  }
+  .modal-content .modal-buttons button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+  .modal-content .save-btn {
+    background: #5cb85c;
+    color: #fff;
+  }
+  .modal-content .save-btn:hover {
+    background: #4cae4c;
+  }
+  .modal-content .cancel-btn {
+    background: #d9534f;
+    color: #fff;
+  }
+  .modal-content .cancel-btn:hover {
+    background: #c9302c;
+  }
+  
